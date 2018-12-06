@@ -2,7 +2,7 @@
 
 Tracemore is a network measurement tool belonging to [traceroute ](http://traceroute.sourceforge.net/)/[ tracebox](http://www.tracebox.org) family: it implements their well known methodology with an extra level of flexibilty and also integrates it with a server-based approach and number of different modes and tests that make it a all-round network measurement tools.
 
-Do to its flexibility Tracemore is especially intended to test new features and new protocols (for instance MPTCP, TCP Fast Open or the upcoming UDP Options). 
+Due to its flexibility Tracemore is especially intended to test new features and new protocols (for instance MPTCP, TCP Fast Open or the upcoming UDP Options). 
 
 Usual transport protocols, TCP (along with its Options), UDP and ICMP are widely supported and every single field of their headers can be customized. 
 Tracemore also allows the use of other transport protocols with a minor tweaking.
@@ -75,11 +75,11 @@ Traceroute
 14: 212.25.162.80   [UDP]  
 
 Server-based
-0:  100.115.103.10  [UDP]  !IP::TTL (e)  UDP::SourcePort (cf21)  !UDP::Checksum (wrg a0b3)  
+0:  100.115.103.10  [UDP]  IP::TTL (e)  UDP::SourcePort (cf21)  !UDP::Checksum (wrg a0b3)  
 14: 212.25.162.80   [8/8]  IP::DSCP/ECN (00->30)  IP::TTL (0e->01)  IP::SourceAddr (100.115.103.10->158.148.205.156)  IP::Checksum (69ea->d606)  UDP::SourcePort (cf21->27ae)  UDP::Checksum (ee84->4dd1) 
 ```
 
 
 
 ## Source
-Source code will be made avaiable in the next weeks on [tracemore github repository](https://github.com/raffaelezullo/tracemore/).
+Source code will be made avaiable in the next weeks on tracemore [github repository](https://github.com/raffaelezullo/tracemore/).
