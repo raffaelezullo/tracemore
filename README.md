@@ -23,20 +23,20 @@ Tracemore can be easily compiled on Linux host. No library is used to forge and 
 
 ## Android
 
-Tracemore can be also compiled for Android using Android NDK: in this wats all platforms are supported: ARM, ARM64, x86_64, MIPS, MIPS64.
+Tracemore can be also compiled for Android using Android NDK. All platforms are supported: ARM, ARM64, x86_64, MIPS, MIPS64.
 
 Android app is available on [Google Play](https://play.google.com/store/apps/details?id=be.ac.ulg.mobiletracebox) and is always updated with the last version of Tracemore as Core: it also embodies a user friendly GUI to easily select and customize the tests.
 
 
 
 ## Web page
-A subset of tests will be also available to users through a Javascript/webRTC web page [www.middleboxes.com/tracemore.me](www.middleboxes.com/tracemore.me)
+A subset of tests will be also available to users through a Javascript/webRTC web page [www.middleboxes.org/tracemore.me](www.middleboxes.org/tracemore.me)
 
 
 
 ## Usage
 ### Joining two MPTCP flows
-The 1st test shows a real multipath communication between our host and a MPTCP server. MPTCP connection is established on the first flow (MP_CAPABLE Syn, MP_CAPABLE Ack) on one TCP flow and MPTCP data is actually sent on this flow and Acked at TCP and MPTCP level (DSS, DSS Ack), then a new flow originated from a different source port joins the existing connection (MP_JOIN Syn -> MP_JOIN Syn Ack). The test is designed in this way for two reasons: i) without exchanging a well formed DSS packet MPTCP stack doesn\'t accept new flows so MP_JOIN couldn\'t be tested; ii) middleboxes can be transparent to TCP Options on Syn packet but then interfere with the same Option on the following packets.
+The 1st test shows a real multipath communication between host running tracemore and a MPTCP server. MPTCP connection is established on the first flow (MP_CAPABLE Syn -> MP_CAPABLE Syn Ack, MP_CAPABLE Ack) on one TCP flow and MPTCP data is actually sent on this flow and Acked at TCP and MPTCP level (DSS), then a new flow originated from a different source port joins the existing connection (MP_JOIN Syn -> MP_JOIN Syn Ack). The test is designed in this way for two reasons: i) without exchanging a well formed DSS packet MPTCP stack doesn\'t accept new flows making MP_JOIN impossible to be tested; ii) middleboxes can be transparent to a certain TCP Option on Syn packet but then interfere with the same Option on the following packets.
 
 ```markdown
  0:  192.168.42.7   [TCP Syn] TCP::SourcePort(24d2)  TCP::Option_MPTCP(00811000000000000000)
@@ -54,7 +54,7 @@ The 1st test shows a real multipath communication between our host and a MPTCP s
 ```
 
 ### Detecting middleboxes (NAT, MPLS tunnel) through traceroute
-The 2nd  test combines traceroute with server-based mode proving how an error in the ICMP quoted packet\'s UDP Checksum can be linked to NAT manipulation as demostrade in _Hic Sunt Nats_. The test also shows the presence of a MPLS tunnel.
+The 2nd  test combines traceroute with server-based mode proving how an error in the ICMP quoted packet\'s UDP Checksum can be linked to NAT manipulation as demostrade in _Hic Sunt Nats_ paper. The test also shows the presence of a MPLS tunnel.
 
 ```markdown
 Traceroute
