@@ -54,7 +54,7 @@ The 1st test shows a real multipath communication between our host and a MPTCP s
 ```
 
 ### Detecting middleboxes (NAT, MPLS tunnel) through traceroute
-The 2nd  test combines traceroute with server-based mode proving how an error in the ICMP quoted packet's UDP Checksum can be linked to NAT manipulation as demostrade in _Hic Sunt Nats_. The test also shows the presence of MPLS tunnel.
+The 2nd  test combines traceroute with server-based mode proving how an error in the ICMP quoted packet's UDP Checksum can be linked to NAT manipulation as demostrade in _Hic Sunt Nats_. The test also shows the presence of a MPLS tunnel.
 
 ```markdown
 Traceroute
