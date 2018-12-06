@@ -11,7 +11,7 @@ Also every field of IPv4 and IPv6 headers can be customized.
 Customizing every single bit of a packet may seem unnecessary but instead gives the chance to test unusual scenarios in order to highlight network problems unnoticed with regular packets or detect and locate seemingly transparent middleboxes.
 
 Tracemore descends from the Core of [Mobile Tracebox](https://play.google.com/store/apps/details?id=be.ac.ulg.mobiletracebox), an Android app developed by Raffaele Zullo that embodies tracebox methodology. 
-The app has been originally presented along with a novel middlebox detection methodology in the following paper: Raffaele Zullo, Antonio Pescapé, Korian Edeline, Benoit Donnet - Hic Sunt NATs: Uncovering Address Translation With a Smart Traceroute.
+The app has been originally presented along with a novel middlebox detection methodology in the following paper: Raffaele Zullo, Antonio Pescape\', Korian Edeline, Benoit Donnet - Hic Sunt NATs: Uncovering Address Translation With a Smart Traceroute.
 
 
 
@@ -36,7 +36,7 @@ A subset of tests will be also available to users through a Javascript/webRTC we
 
 ## Usage
 ### Joining two MPTCP flows
-The 1st test shows a real multipath communication between our host and a MPTCP server. MPTCP connection is established on the first flow (MP_CAPABLE Syn, MP_CAPABLE Ack) on one TCP flow and MPTCP data is actually sent on this flow and Acked at TCP and MPTCP level (DSS, DSS Ack), then a new flow originated from a different source port joins the existing connection (MP_JOIN Syn -> MP_JOIN Syn Ack). The test is designed in this way for two reasons: i) without exchanging a well formed DSS packet MPTCP stack doesn't accept new flows so MP_JOIN couldn't be tested; ii) middleboxes can be transparent to TCP Options on Syn packet but then interfere with the same Option on the following packets.
+The 1st test shows a real multipath communication between our host and a MPTCP server. MPTCP connection is established on the first flow (MP_CAPABLE Syn, MP_CAPABLE Ack) on one TCP flow and MPTCP data is actually sent on this flow and Acked at TCP and MPTCP level (DSS, DSS Ack), then a new flow originated from a different source port joins the existing connection (MP_JOIN Syn -> MP_JOIN Syn Ack). The test is designed in this way for two reasons: i) without exchanging a well formed DSS packet MPTCP stack doesn\'t accept new flows so MP_JOIN couldn\'t be tested; ii) middleboxes can be transparent to TCP Options on Syn packet but then interfere with the same Option on the following packets.
 
 ```markdown
  0:  192.168.42.7   [TCP Syn] TCP::SourcePort(24d2)  TCP::Option_MPTCP(00811000000000000000)
@@ -54,7 +54,7 @@ The 1st test shows a real multipath communication between our host and a MPTCP s
 ```
 
 ### Detecting middleboxes (NAT, MPLS tunnel) through traceroute
-The 2nd  test combines traceroute with server-based mode proving how an error in the ICMP quoted packet's UDP Checksum can be linked to NAT manipulation as demostrade in _Hic Sunt Nats_. The test also shows the presence of a MPLS tunnel.
+The 2nd  test combines traceroute with server-based mode proving how an error in the ICMP quoted packet\'s UDP Checksum can be linked to NAT manipulation as demostrade in _Hic Sunt Nats_. The test also shows the presence of a MPLS tunnel.
 
 ```markdown
 Traceroute
