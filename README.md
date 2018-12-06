@@ -1,5 +1,5 @@
 # Tracemore
-An Extra-flexible Light-weighted Network Measurement Tool  
+Tracemore is a network measurement tool belonging to [tracebox](http://www.tracebox.org)
 
 ## Welcome to GitHub Pages
 
