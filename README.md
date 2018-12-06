@@ -8,9 +8,9 @@ Usual transport protocols, TCP (along with its Options), UDP and ICMP are widely
 Tracemore also allows the use of other transport protocols with a minor tweaking.
 Also every field of IPv4 and IPv6 headers can be customized.
 
-Customizing every single bit of a packet may seem unnecessary but instead gives the chance to test unusual scenarios in order to highlight network problems unnoticed with regular packets or detect and locate --- transparent middleboxes.
+Customizing every single bit of a packet may seem unnecessary but instead gives the chance to test unusual scenarios in order to highlight network problems unnoticed with regular packets or detect and locate seemingly transparent middleboxes.
 
-Tracemore descends from the Core of [Mobile Tracebox](---), an Android app developed by Raffaele Zullo that embodies tracebox methodology. 
+Tracemore descends from the Core of [Mobile Tracebox](https://play.google.com/store/apps/details?id=be.ac.ulg.mobiletracebox), an Android app developed by Raffaele Zullo that embodies tracebox methodology. 
 The app has been originally presented along with a novel middlebox detection methodology in the following paper: Raffaele Zullo, Antonio Pescapé, Korian Edeline, Benoit Donnet - Hic Sunt NATs: Uncovering Address Translation With a Smart Traceroute.
 
 
