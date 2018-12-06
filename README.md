@@ -1,6 +1,6 @@
 ## Tracemore
 
-Tracemore is a network measurement tool belonging to [traceroute](http://traceroute.sourceforge.net/)/[tracebox](http://www.tracebox.org) family: it implements their well known methodology with an extra level of flexibilty and also integrates it with a server-based approach and number of different modes and tests that make it a all-round network measurement tools.
+Tracemore is a network measurement tool belonging to [traceroute ](http://traceroute.sourceforge.net/)/[ tracebox](http://www.tracebox.org) family: it implements their well known methodology with an extra level of flexibilty and also integrates it with a server-based approach and number of different modes and tests that make it a all-round network measurement tools.
 
 Do to its flexibility Tracemore is especially intended to test new features and new protocols (for instance MPTCP, TCP Fast Open or the upcoming UDP Options). 
 
@@ -25,7 +25,7 @@ Tracemore can be easily compiled on Linux host. No library is used to forge and 
 
 Tracemore can be also compiled for Android using Android NDK: in this wats all platforms are supported: ARM, ARM64, x86_64, MIPS, MIPS64.
 
-Android app is available on [https://play.google.com/store/apps/details?id=be.ac.ulg.mobiletracebox](Google Play) and is always updated with the last version of Tracemore as Core: it also embodies a user friendly GUI to easily select and customize the tests.
+Android app is available on [Google Play](https://play.google.com/store/apps/details?id=be.ac.ulg.mobiletracebox) and is always updated with the last version of Tracemore as Core: it also embodies a user friendly GUI to easily select and customize the tests.
 
 
 
@@ -76,7 +76,7 @@ Traceroute
 
 Server-based
 0:  100.115.103.10  [UDP]  !IP::TTL (e)  UDP::SourcePort (cf21)  !UDP::Checksum (wrg a0b3)  
-14: 212.25.162.80  [8/8]  IP::DSCP/ECN (00->30)  IP::TTL (0e->01)  IP::SourceAddr (100.115.103.10->158.148.205.156)  IP::Checksum (69ea->d606)  UDP::SourcePort (cf21->27ae)  UDP::Checksum (ee84->4dd1) 
+14: 212.25.162.80   [8/8]  IP::DSCP/ECN (00->30)  IP::TTL (0e->01)  IP::SourceAddr (100.115.103.10->158.148.205.156)  IP::Checksum (69ea->d606)  UDP::SourcePort (cf21->27ae)  UDP::Checksum (ee84->4dd1) 
 ```
 
 
