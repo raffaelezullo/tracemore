@@ -11,7 +11,7 @@ Also every field of IPv4 and IPv6 headers can be customized.
 Customizing every single bit of a packet may seem unnecessary but instead gives the chance to test unusual scenarios in order to highlight network problems unnoticed with regular packets or detect and locate seemingly transparent middleboxes.
 
 Tracemore descends from the Core of [Mobile Tracebox](https://play.google.com/store/apps/details?id=be.ac.ulg.mobiletracebox), an Android app developed by Raffaele Zullo that embodies tracebox methodology. 
-The app has been originally presented along with a novel middlebox detection methodology in the following paper: Raffaele Zullo, Antonio Pescape, Korian Edeline, Benoit Donnet - Hic Sunt NATs: Uncovering Address Translation With a Smart Traceroute.
+The app has been originally presented along with a novel middlebox detection methodology in the following paper: Raffaele Zullo, Antonio Pescape\', Korian Edeline, Benoit Donnet - Hic Sunt NATs: Uncovering Address Translation With a Smart Traceroute.
 
 
 
