@@ -10,7 +10,7 @@ CFLAGSANDROID=-std=c99 -w -pthread -D_BSD_SOURCE -D_NO_GETADDRINFO
 
 all: tracemore
 
-tracemore: tracemore.c $(OBJ_DIR)/sha1.o $(OBJ_DIR)/ifaddrs.o 
+tracemore: obj_dir tracemore.c $(OBJ_DIR)/sha1.o $(OBJ_DIR)/ifaddrs.o 
 	$(CC) -o tracemore tracemore.c $(OBJ_DIR)/sha1.o $(OBJ_DIR)/ifaddrs.o $(CFLAGS)
 
 tracemore.o:	
@@ -21,6 +21,9 @@ $(OBJ_DIR)/sha1.o: $(LIB_DIR)/$(SHA_DIR)/sha1.c
 
 $(OBJ_DIR)/ifaddrs.o:  $(LIB_DIR)/$(IFA_DIR)/ifaddrs.c
 	$(CC) $(LIB_DIR)/$(IFA_DIR)/ifaddrs.c -c -o $(OBJ_DIR)/ifaddrs.o $(CFLAGS)
+
+obj_dir:
+	@ mkdir -p $(OBJ_DIR)
 
 clean: 
 	@ rm -f $(OBJ_DIR)/*.o tracemore
