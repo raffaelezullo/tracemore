@@ -2926,7 +2926,7 @@ void parse_post_payload_udp_params( int c, char* v[]) {
 			uint8_t* udp_opt_start = (uint8_t*) &(sent_udp->source) + udp_header_payload_len;
 			uint8_t* udp_opt_end = (uint8_t*) &(sent_udp->source) + current_offset;
 			// add NOP padding if needed
-			if (( ( current_offset ) % 2 )==1 ) { // no padding for OCS
+			if (( ( current_offset ) % 2 )==1 ) { 
 				*udp_opt_end = 0x01;	// NOP
 				udp_opt_end++;
 				udp_trailer_len++;
@@ -2934,8 +2934,8 @@ void parse_post_payload_udp_params( int c, char* v[]) {
 			// add CCO
 			struct udp_opt_cco * cco = (struct udp_opt_cco *) udp_opt_end;
 			cco->kind = 0xCC;
-			cco->len = 0x04;		// no len for OCS
-			udp_trailer_len += 4; 	// 3 for OCS			
+			cco->len = 0x04;		
+			udp_trailer_len += 4; 	
 			// Odd byte
 			uint8_t odd_byte = 0;
 			int odd_byte_offset = 0;
@@ -2950,9 +2950,6 @@ void parse_post_payload_udp_params( int c, char* v[]) {
 			uint8_t * udp_opt_first_even_byte = (uint8_t*) &sent_udp->source + udp_header_payload_len + odd_byte_offset;
 			cco->value = ip_checksum( udp_opt_first_even_byte, udp_trailer_len);
 			i++;
-			// For OCS 
-			// if ( payload_len % 2 == 1)
-			// 		cco_initial_value = flip_bytes_uint16t (cco_initial_value);
 		} else 
 			i++;
 	}
