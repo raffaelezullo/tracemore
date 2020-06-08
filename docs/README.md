@@ -29,11 +29,6 @@ Android app is available on [Google Play](https://play.google.com/store/apps/det
 
 
 
-## Web page
-A subset of tests will be also available to users through a Javascript/webRTC web page [www.middleboxes.org/tracemore.me](www.middleboxes.org/tracemore.me)
-
-
-
 ## Usage
 ### Joining two MPTCP flows
 The 1st test shows a real multipath communication between host running tracemore and a MPTCP server. MPTCP connection is established on the first flow (MP_CAPABLE Syn -> MP_CAPABLE Syn Ack, MP_CAPABLE Ack) on one TCP flow and MPTCP data is actually sent on this flow and Acked at TCP and MPTCP level (DSS), then a new flow originated from a different source port joins the existing connection (MP_JOIN Syn -> MP_JOIN Syn Ack). The test is designed in this way for two reasons: i) without exchanging a well formed DSS packet MPTCP stack doesn\'t accept new flows making MP_JOIN impossible to be tested; ii) middleboxes can be transparent to a certain TCP Option on Syn packet but then interfere with the same Option on the following packets.
