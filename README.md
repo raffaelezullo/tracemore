@@ -29,10 +29,6 @@ Android app is available on [Google Play](https://play.google.com/store/apps/det
 
 
 
-## Web page
-A subset of tests will be also available to users through a Javascript/webRTC web page [www.middleboxes.org/tracemore.me](www.middleboxes.org/tracemore.me)
-
-
 
 ## Usage
 ### Joining two MPTCP flows
